@@ -1,15 +1,102 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import { Image } from "astro:assets";
+import funk from "../assets/images/funk.webp";
+import james from "../assets/images/james-brown.webp";
+import parliment from "../assets/images/parliament_funkadelic_main.jpg";
+import sly from "../assets/images/sly.jpg";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout
+  title="Funk"
+  description="Funk er en musikgenre, der opstod i USA i 1960'erne og blev populær i 1970'erne. Den er karakteriseret ved en stærk rytmisk groove, fremtrædende baslinjer, synkoperede rytmer og ofte gentagne mønstre."
+  ogtitle="Funk genren"
+  ogdescription="Funk er en hybrid af flere musikstilarter, herunder soul, jazz og R&B, rhythm and blues."
+>
+  <section class="grid mx-auto container gap-8 pt-8 prose">
+    <article>
+      <h1 class="text-[#D76A38]">Funk musikgenren</h1>
+
+      <h2 class="text-[#6D237E]">1) Genren</h2>
+
+      <p>
+        Funk er en musikgenre, der opstod i USA i 1960'erne og blev populær i
+        1970'erne. Den er karakteriseret ved en stærk rytmisk groove,
+        fremtrædende baslinjer, synkoperede rytmer og ofte gentagne mønstre.
+      </p>
+
+      <p>
+        Funk er en hybrid af flere musikstilarter, herunder soul, jazz og R&B
+        (rhythm and blues). Nogle af de mest kendte elementer i funk inkluderer
+        en markant brug af basguitar, rytmisk guitarspil og skarpe
+        blæsersektioner, som ofte skaber et energisk og dansabelt udtryk.
+      </p>
+
+      <Image src={funk} alt="Funk inspireret billede" />
+
+      <hr />
+    </article>
+
+    <article>
+      <h2 class="text-[#6D237E]">2) Karakteristika</h2>
+
+      <ul>
+        <li>
+          <strong>Groove og rytme:</strong> Basguitaren spiller en central rolle
+          og skaber et kraftfuldt groove sammen med trommerne. Der er ofte fokus
+          på "the one" – hvilket betyder, at den første takt i hver rytmecyklus betones
+          tungt.
+        </li>
+        <li>
+          <strong>Riff-baseret struktur:</strong> Mange funk-numre bygger på gentagne
+          rytmiske og melodiske mønstre (riffs), der gentages gennem hele sangen.
+        </li>
+        <li>
+          <strong>Synkopering og polyrytmik:</strong> Rytmerne er ofte komplekse
+          med synkoperede mønstre og lagdelte rytmer.
+        </li>
+        <li>
+          <strong>Blæsersektioner:</strong> Trompeter, saxofoner og tromboner bruges
+          ofte til at tilføje energi og stød til arrangementerne.
+        </li>
+        <li>
+          <strong>Vokale fraseringer:</strong> Vokalen kan være rytmisk og ofte præget
+          af improvisation, rå udtryk og korte fraseringer.
+        </li>
+      </ul>
+
+      <hr />
+    </article>
+
+    <article>
+      <h2 class="text-[#6D237E]">3) Kendte kunstnere og bands</h2>
+      <ul>
+        <li>
+          <strong>James Brown:</strong> Kaldes ofte "The Godfather of Funk" og var
+          en pioner inden for genren med sange som "Papa's Got a Brand New Bag" og
+          "I Got You (I Feel Good)".
+        </li>
+        <Image src={james} alt="Musikeren James Brown" />
+        <li>
+          <strong>Parliament-Funkadelic:</strong> Ledet af George Clinton, kombinerede
+          psykedelisk rock, soul og funk i deres musik.
+        </li>
+        <Image src={parliment} alt="Bandet Parliament-Funkadelic" />
+        <li>
+          <strong>Sly and the Family Stone:</strong> En anden tidlig funk-gruppe,
+          der blandede elementer af rock, soul og pop.
+        </li>
+        <Image src={sly} alt=" Bandet Sly and the Family Stone" />
+      </ul>
+
+      <hr />
+
+      <p>
+        Lyt til funk hits <a
+          href="https://open.spotify.com/playlist/37i9dQZF1DWWvhKV4FBciw?si=rbQZjV7JSDKrwrDNiyrWTQ"
+          target="_blank">lige her:</a
+        >
+      </p>
+    </article>
+  </section>
 </MainLayout>
